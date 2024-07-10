@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.shine-effect {
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+              0 0 10px rgba(255, 255, 255, 0.5),
+              0 0 20px rgba(255, 255, 255, 0.5),
+              0 0 25px rgba(255, 255, 255, 0.5);
+}
+
+.shine-glow:hover {
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+              0 0 10px rgba(255, 255, 255, 0.5),
+              0 0 20px rgba(255, 255, 255, 0.5),
+              0 0 25px rgba(255, 255, 255, 0.5);
+}
+
+.nav-item {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px; /* Ajust as needed */
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px; /* Thickness of the line */
+  background-color: white;
+  transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: center;
+}
+
+.nav-item:hover::after {
+  transform: scaleX(1);
+}
+
+.shine-glowHeader-hover:hover {
+  /* Tambahkan efek bersinar di sini */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Misalnya, warna putih dengan opasitas */
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #0A3842;
+  animation: spin 1s linear infinite;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
